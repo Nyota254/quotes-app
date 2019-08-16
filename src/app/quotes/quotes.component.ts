@@ -16,6 +16,10 @@ export class QuotesComponent implements OnInit {
     new Quotes('Frank Lampard','I haven’t failed. I’ve just found 10,000 ways that won’t work.' , 'Thomas Edison' , 0 , new Date(2019,6,1))
   ]
 
+  toggleDetails(index){
+    this.quotes[index].showDetails = !this.quotes[index].showDetails;
+  }
+
   constructor() { }
 
   ngOnInit() {
