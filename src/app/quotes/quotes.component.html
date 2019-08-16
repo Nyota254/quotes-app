@@ -1,11 +1,23 @@
 <div class="container">
-    <h1>WELCOME TO QUOTES BASE</h1>
-    <hr>
-    <p>In this site you will view diffrent quotes and depending on whether you liked or did not like it you will vote for it.</p>
-    <p>You can also add your own Quote to the site.</p>
-    <ul *ngFor='let quote of quotes;let i = index'> 
-        <li>{{quote.quotes}} By: {{quote.author}}</li>
-        <button (click)='toggleDetails(i)'>Show Quote Details</button>
-        <app-quotes-detail *ngIf='quote.showDetails' bind-quotes='quote'></app-quotes-detail>
-    </ul>
+  <h1>WELCOME TO QUOTES BASE</h1>
+  <hr>
+  <h2>Description</h2>
+  <p>In this site you will view diffrent quotes and depending on whether you liked or did not like it you will vote for
+    it.You can also add your own Quote to the site.</p>
+  <hr>
+  <div class="row">
+    <div class="col-md-6">
+      <h2>Quotes Available</h2>
+      <div *ngFor='let quote of quotes;let i = index'>
+        <p id="quotefont">{{quote.quotes}}<p>
+            <p>Quote by: {{quote.author}}</p>
+            <button class="btn btn-primary" (click)='toggleDetails(i)'>Show Quote Details</button>
+            <app-quotes-detail *ngIf='quote.showDetails' bind-quotes='quote' (delete1)='quoteDelete($event,i)'>
+            </app-quotes-detail>
+      </div>
+    </div>
+    <div class="col-md-6">
+
+    </div>
+  </div>
 </div>
