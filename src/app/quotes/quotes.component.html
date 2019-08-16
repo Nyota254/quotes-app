@@ -1,11 +1,9 @@
-<div>
+<div class="container">
     <h1>WELCOME TO QUOTES BASE</h1>
     <hr>
     <p>In this site you will view diffrent quotes and depending on whether you liked or did not like it you will vote for it.</p>
     <p>You can also add your own Quote to the site.</p>
-    <ul *ngFor="let quote of quotes"> 
-        <li>
-            {{quote.quote}}
-        </li>
+    <ul *ngFor='let quote of quotes;let i = index'> 
+        <li>{{quote.quotes}} By: {{quote.author}}</li>
     </ul>
 </div>
