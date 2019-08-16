@@ -5,5 +5,6 @@
     <p>You can also add your own Quote to the site.</p>
     <ul *ngFor='let quote of quotes;let i = index'> 
         <li>{{quote.quotes}} By: {{quote.author}}</li>
+        <app-quotes-detail bind-quotes='quote'></app-quotes-detail>
     </ul>
 </div>
