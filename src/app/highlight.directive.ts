@@ -9,17 +9,31 @@ export class HighlightDirective {
   constructor(private elem:ElementRef) {}
 
   // This code will sort highest to lowest vote
-  @HostListener("click") onClicks(){
-    this.backgroundHighlight("aquamarine")
-  }
+  // sortNumbersArray = function(){
+  //   let valuesOfVote = this.quotes.votes;
+  //   function sortNumber(a, b)
+  //   {
+  //     return a - b;
+  //   }
+    
+  //   let sortedNumber = valuesOfVote.sort(sortNumber);
+  //   let highestVote = sortedNumber[0];
+  //   return highestVote;
+  // }
 
-  @HostListener("dblclick") onDoubleClicks(){
-    this.backgroundHighlight("bisque")
-  }
 
-  private backgroundHighlight(action:string){
-    this.elem.nativeElement.style.backgroundColor=action;
+  // @HostListener("click", ['$event']) onClicks(){
+    
+  //   this.backgroundHighlight("aquamarine")
+  // }
 
-  }
+  // @HostListener("dblclick") onDoubleClicks(){
+  //   this.backgroundHighlight("bisque")
+  // }
+
+  // private backgroundHighlight(action:string){
+  //   this.elem.nativeElement.style.backgroundColor=action;
+
+  // }
 
 }
