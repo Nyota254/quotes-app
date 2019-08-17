@@ -37,6 +37,19 @@ export class QuotesComponent implements OnInit {
   }
   }
 
+  vote(votetype:boolean, index){
+    if(votetype == true){
+      if(index){
+        return this.quotes[index].votes++;
+      }
+    }
+    if(votetype == false){
+      if(index){
+        return this.quotes[index].votes--;
+      }
+    }
+  }
+
   constructor() { }
 
   ngOnInit() {

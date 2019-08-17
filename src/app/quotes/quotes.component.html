@@ -14,10 +14,8 @@
             <p>Quote by: {{quote.author}}</p>
             <p>Vote:</p>
             <div>
-              <i title="Up Votes" (click)="Vote(up)" class="fa fa-thumbs-up fa-2x"></i>
-              <i title="Down Votes" (click)="Vote(down)" class="fa fa-thumbs-down fa-2x"></i>
-
-              <br>Number Of Votes: {{vote}}
+              <i title="Up Votes" (click)="vote(true,i)" class="fa fa-thumbs-up fa-2x"></i>
+              <i title="Down Votes" (click)="vote(false,i)" class="fa fa-thumbs-down fa-2x"></i>
             </div>
             <button class="btn btn-primary" (click)='toggleDetails(i)'>Show Quote Details</button>
             <app-quotes-detail *ngIf='quote.showDetails' bind-quotes='quote' (delete1)='quoteDelete($event,i)'>
