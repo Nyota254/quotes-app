@@ -36,8 +36,11 @@ export class QuotesComponent implements OnInit {
     }
   }
   }
-
+  
+  
   vote(votetype:boolean, index){
+
+    let fowardIndex = index+1;
     if(votetype == true){
       if(index){
         return this.quotes[index].votes++;

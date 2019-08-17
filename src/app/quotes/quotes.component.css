@@ -6,3 +6,11 @@
 i {
     cursor: pointer;
 }
+
+#custom-color {
+    color: blue;
+}
+
+#custom-color2 {
+    color: red;
+}
