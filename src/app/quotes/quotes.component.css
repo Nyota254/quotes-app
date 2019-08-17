@@ -2,3 +2,7 @@
     font-family: 'Niconne', cursive;
     font-size: 30px;
 }
+
+i {
+    cursor: pointer;
+}
