@@ -1,3 +1,3 @@
-<p>This Quote was uploaded by: {{quotes.name}}</p>
+<p>This Quote was uploaded by: {{quotes.name}} {{quotes.dateEnterd|dateCount}} Days ago</p>
 <p>This Quote has {{quotes.votes}} votes.</p>
 <button class="btn btn-danger" (click)='deleteQuote(true)'>Delete Quote</button>

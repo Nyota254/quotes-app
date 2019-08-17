@@ -29,7 +29,7 @@ export class QuotesComponent implements OnInit {
 
   quoteDelete(delete1,index){
     if(delete1){
-    let check = confirm(`Are you sure you want to delete`)
+    let check = confirm(`Are you sure you want to delete this quote by ${this.quotes[index].author}`)
     
     if(check){
       this.quotes.splice(index,1)
