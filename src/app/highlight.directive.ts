@@ -6,7 +6,9 @@ import { Directive,ElementRef,HostListener } from '@angular/core';
 })
 export class HighlightDirective {
 
-  constructor(private elem:ElementRef) {}
+  constructor(private elem:ElementRef) {
+    this.elem.nativeElement.style.backgroundColor="aquamarine";
+  }
 
   // This code will sort highest to lowest vote
   // sortNumbersArray = function(){

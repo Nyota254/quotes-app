@@ -9,7 +9,7 @@
     <div class="col-md-6">
       <h2>Quotes Available</h2>
       <hr>
-      <div id="quoteboarder" appHighlight *ngFor='let quote of quotes;let i = index'>
+      <div id="quoteboarder" *ngFor='let quote of quotes;let i = index'>
         <p id="quotefont">{{quote.id}}.) {{quote.quotes}}<p>
             <p>Quote by: {{quote.author}}</p>
             <p>Vote:</p>
